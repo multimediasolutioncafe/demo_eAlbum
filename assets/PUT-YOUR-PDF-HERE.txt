@@ -1,9 +1,0 @@
-Place your PDF file in this folder.
-
-Default filename: album.pdf
-
-If your PDF is named something else, edit PDF_FILE in ../config.js
-Example: PDF_FILE: "Adi-Wedding-Album.pdf"
-
-Optional music:
-Place an MP3 here and set MUSIC_FILE in ../config.js
