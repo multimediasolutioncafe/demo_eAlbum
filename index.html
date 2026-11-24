@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta name="theme-color" content="#09090c" />
+    <title>MSC E-Album Studio</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="shortcut icon" href="assets/logo.png" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="topbar">
+      <a class="brand" href="https://multimediasolutioncafe.shop/" aria-label="MSC E-Album Studio"
+        ><span class="brand-mark"><img src="assets/logo.png" alt="msc logo"></span
+        ><span>MSC <i>E-ALBUM STUDIO</i></span></a
+      >
+      <div class="top-title">
+        <span class="live-dot"></span
+        ><span id="albumTitle">A DIGITAL WEDDING ALBUM</span>
+      </div>
+      <div class="top-actions">
+        <button
+          class="glass-btn"
+          id="musicBtn"
+          title="Background music"
+          aria-label="Toggle music"
+        >
+          ♫
+        </button>
+        <button
+          class="glass-btn"
+          id="fullscreenBtn"
+          title="Fullscreen"
+          aria-label="Toggle fullscreen"
+        >
+          ⛶
+        </button>
+      </div>
+    </header>
+
+    <main class="experience">
+      <div class="intro" id="intro">
+        <div class="intro-kicker">A STORY TO REMEMBER</div>
+        <div class="intro-line"></div>
+        <h1 id="introTitle">A Beautiful Beginning</h1>
+        <p>
+          Every photograph holds a memory. Turn the pages to relive the moments.
+        </p>
+        <button class="open-btn" id="openBtn">
+          <span>OPEN ALBUM</span><b>↗</b>
+        </button>
+      </div>
+
+      <section
+        class="book-stage"
+        id="bookStage"
+        aria-label="Digital photo album"
+      >
+        <div class="book-aura"></div>
+        <div class="book-shadow"></div>
+        <div class="book" id="book"></div>
+      </section>
+
+      <div class="loading" id="loading">
+        <div class="loader-ring"></div>
+        <span>CRAFTING YOUR EXPERIENCE</span>
+        <small id="loadingText">Preparing your album…</small>
+      </div>
+
+      <div class="error-panel" id="errorPanel" hidden>
+        <strong>We couldn't open this album</strong>
+        <p id="errorMessage">
+          Check the PDF filename in config.js and try again.
+        </p>
+      </div>
+    </main>
+
+    <footer class="bottom-bar">
+      <div class="bottom-side">
+        <span class="edition">A PRIVATE DIGITAL EDITION</span>
+      </div>
+      <div class="page-controls">
+        <button class="round-control" id="prevBtn" aria-label="Previous page">
+          ←
+        </button>
+        <div class="page-readout">
+          <strong id="currentPage">—</strong
+          ><span class="readout-divider">/</span><span id="totalPages">—</span>
+        </div>
+        <button class="round-control" id="nextBtn" aria-label="Next page">
+          →
+        </button>
+      </div>
+      <div class="bottom-side bottom-tools">
+        <button class="text-control" id="zoomBtn">ZOOM <span>＋</span></button>
+        <button class="text-control" id="soundBtn">
+          SOUND <span id="soundState">OFF</span>
+        </button>
+      </div>
+    </footer>
+
+    <div class="mobile-hint" id="mobileHint">SWIPE TO TURN PAGES</div>
+    <audio id="albumAudio" autoplay loop preload="none"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
